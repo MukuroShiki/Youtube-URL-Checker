@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background-color: indianred;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+main {
+    margin: 10vh auto;
+    width: min(1300px, 90%);
+}
+
+main h1, h2{
+    text-align: center;
+}
+
+.input_area {
+    width: min(800px, 100%);
+    margin: 5vh auto;
+}
+
+.input_area input {
+    width: 100%;
+    padding: 1vh 0;
+    font-size: 24px;
+    border: 4px solid rgb(51, 51, 51);
+    border-radius: 8px;
+}
+
+.input_area button {
+    margin-top: 1vh;
+    padding: 0 1%;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid rgb(51, 51, 51);
+    border-radius: 8px;
+}
+
+#videoInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#videoInfo img.thumbnail {
+    display: block;
+    width: min(500px, 90%);
+    filter: blur(20px);
+    transition: all 0.2s ease;
+}
+
+#videoInfo img.thumbnail:hover {
+    filter: blur(0);
+}
+
+#videoInfo ul {
+    list-style: none;
+}
+
+#videoInfo ul li {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#videoInfo ul li.title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#videoInfo ul li.channel, #videoInfo ul li.date, #videoInfo ul li.category {
+    font-size: 24px;
+    font-weight: bold;
+}
