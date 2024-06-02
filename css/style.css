@@ -16,6 +16,63 @@ body {
     overflow-y: scroll;
 }
 
+header {
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+header .header_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header_inner .header_reset {
+    padding: 8px;
+}
+
+header .header_inner .header_reset a {
+    display: block;
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 12px;
+    transition: 0.2s all ease;
+}
+
+header .header_inner .header_reset a:hover {
+    opacity: 0.5;
+}
+
+header .header_inner ul.header_link_list {
+    display: flex;
+    list-style: none;
+    width: fit-content;
+    height: 64px;
+}
+
+header .header_inner ul.header_link_list li {
+    padding: 12px;
+}
+
+header .header_inner ul.header_link_list li a img {
+    display: block;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.2s all ease;
+}
+
+header .header_inner ul.header_link_list li a img:hover {
+    transform: scale(1.1);
+}
+
 main {
     margin: 10vh auto;
     width: min(1300px, 90%);
@@ -66,11 +123,17 @@ main h1, h2{
 }
 
 #videoInfo ul {
+    display: block;
+    width: 100%;
     list-style: none;
 }
 
+#videoInfo ul.status {
+    margin-top: 1%;
+}
+
 #videoInfo ul.status li {
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid black;
 }
 
 #videoInfo ul.status li.title {
@@ -78,15 +141,9 @@ main h1, h2{
     font-weight: bold;
 }
 
-#videoInfo ul.status li.channel, #videoInfo ul.status li.date, #videoInfo ul.status li.category {
+#videoInfo ul.status li.channel, #videoInfo ul.status li.date, #videoInfo ul.status li.category, #videoInfo p.tags {
     font-size: 24px;
     font-weight: bold;
-}
-
-#videoInfo ul.tags {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
 }
 
 #videoInfo ul.tags li {
@@ -98,4 +155,59 @@ main h1, h2{
     color: white;
     font-weight: bold;
     border-radius: 10px;
+}
+
+#videoInfo details.description {
+    background-color: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+#videoInfo details.description summary {
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#videoInfo details.description summary::-webkit-details-marker {
+    display: none;
+}
+
+#videoInfo details.description[open] summary {
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+}
+
+footer .footer_inner {
+    padding: 1%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    text-align: center;
+}
+
+footer .footer_inner a {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: auto;
+}
+
+footer .footer_inner a img {
+    width: 100%;
+    transition: 0.2s all ease;
+}
+
+footer .footer_inner a img:hover {
+    transform: scale(1.1);
+}
+
+footer .footer_inner .author {
+    color: gray;
 }
