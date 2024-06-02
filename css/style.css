@@ -69,16 +69,33 @@ main h1, h2{
     list-style: none;
 }
 
-#videoInfo ul li {
+#videoInfo ul.status li {
     border: 2px solid rgb(0, 0, 0);
 }
 
-#videoInfo ul li.title {
+#videoInfo ul.status li.title {
     font-size: 32px;
     font-weight: bold;
 }
 
-#videoInfo ul li.channel, #videoInfo ul li.date, #videoInfo ul li.category {
+#videoInfo ul.status li.channel, #videoInfo ul.status li.date, #videoInfo ul.status li.category {
     font-size: 24px;
     font-weight: bold;
+}
+
+#videoInfo ul.tags {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#videoInfo ul.tags li {
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 1%;
+    padding: 1%;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
 }

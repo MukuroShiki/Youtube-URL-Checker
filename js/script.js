@@ -42,19 +42,22 @@ function fetchVideoInfo() {
             // Tagsが存在する場合は<li>タグで囲んで出力、存在しない場合は'None'を出力
             let tagsHtml = 'None';
             if (snippet.tags) {
-                tagsHtml = '<ul>' + snippet.tags.map(tag => `<li>${tag}</li>`).join('') + '</ul>';
+                tagsHtml = '<ul class="tags">' + snippet.tags.map(tag => `<li>${tag}</li>`).join('') + '</ul>';
             }
 
             let snippetInfoHtml = `
                 <img class="thumbnail" src="${snippet.thumbnails.high.url}" alt="サムネイル画像">
-                <ul>
+                <ul class="status">
                     <li class="title">${snippet.title}</li>
                     <li class="channel">チャンネル名: ${snippet.channelTitle}</li>
                     <li class="date">投稿日時: ${formatPublishedAt(snippet.publishedAt)}</li>
                     <li class="category">カテゴリーID: ${snippet.categoryId}</li>
                 </ul>
-                <p class="description">動画説明文: <br>${formattedDescription}</p>
                 <p class="tags">タグ: </p>${tagsHtml}
+                <details class="description">
+                    <summary>動画説明文</summary>
+                    ${formattedDescription}
+                </details>
             `;
             document.getElementById('videoInfo').innerHTML = snippetInfoHtml;
         })
