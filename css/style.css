@@ -66,6 +66,7 @@ main h1, h2{
 }
 
 #videoInfo ul {
+    margin-top: 1%;
     list-style: none;
 }
 
@@ -78,7 +79,7 @@ main h1, h2{
     font-weight: bold;
 }
 
-#videoInfo ul.status li.channel, #videoInfo ul.status li.date, #videoInfo ul.status li.category {
+#videoInfo ul.status li.channel, #videoInfo ul.status li.date, #videoInfo ul.status li.category, #videoInfo p.tags {
     font-size: 24px;
     font-weight: bold;
 }
@@ -98,4 +99,26 @@ main h1, h2{
     color: white;
     font-weight: bold;
     border-radius: 10px;
+}
+
+#videoInfo details.description {
+    background-color: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#videoInfo details.description summary {
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#videoInfo details.description summary::-webkit-details-marker {
+    display: none;
+}
+
+#videoInfo details.description[open] summary {
+    border-bottom: 1px solid #ccc;
 }
