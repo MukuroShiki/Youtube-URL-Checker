@@ -4,11 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Youtube URL チェッカー</title>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <div class="container">
-            <header></header>
+            <header>
+                <div class="header_inner">
+                    <div class="header_reset"><a href="./index.html">リセット</a></div>
+                    <ul class="header_link_list">
+                        <li><a rel="nofollow noopener" target="_blank" href="https://github.com/MukuroShiki/Youtube-URL-Checker"><img src="./img/github-logo.svg" title="githubリポジトリへ飛ぶ"></a></li>
+                        <li><a rel="nofollow noopener" target="_blank" href="https://x.com/mukuroshiki"><img src="./img/x-logo.svg" title="作者のX"></a></li>
+                        <li><a rel="nofollow noopener" target="_blank" href="https://bsky.app/profile/mukuroshiki.bsky.social"><img src="./img/bluesky-logo.svg" title="作者のBluesky"></a></li>
+                        <li><a rel="nofollow noopener" target="_blank" href="https://misskey.io/@mukuro_shiki"><img src="./img/misskeyio-logo.png" title="作者のMisskey.io"></a></li>
+                    </ul>
+                </div>
+            </header>
             <main>
                 <h1>Youtube URL チェッカー</h1>
                 <h2>確認したい動画のリンクを入力して実行ボタンをクリック。<br>
@@ -24,10 +34,13 @@
                 </div>
             </main>
             <footer>
-                <p>注意：このサイトは制限のあるAPIを用いて動作しているため、何度も実行するとサービスが停止します。</p>
-                <p>Coded by MukuroShiki</p>
+                <div class="footer_inner">
+                    <a rel="nofollow noopener" target="_blank" href="https://github.com/MukuroShiki/Youtube-URL-Checker"><img src="./img/github-logo.svg" alt="githubロゴ"></a>
+                    <p>注意：このサイトは制限のあるAPIを用いて動作しているため、何度も実行するとサービスが停止します。</p>
+                    <p class="author">Coded by MukuroShiki</p>
+                </div>
             </footer>            
         </div>
-        <script src="/js/script.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>

@@ -16,6 +16,63 @@ body {
     overflow-y: scroll;
 }
 
+header {
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+header .header_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header_inner .header_reset {
+    padding: 8px;
+}
+
+header .header_inner .header_reset a {
+    display: block;
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 12px;
+    transition: 0.2s all ease;
+}
+
+header .header_inner .header_reset a:hover {
+    opacity: 0.5;
+}
+
+header .header_inner ul.header_link_list {
+    display: flex;
+    list-style: none;
+    width: fit-content;
+    height: 64px;
+}
+
+header .header_inner ul.header_link_list li {
+    padding: 12px;
+}
+
+header .header_inner ul.header_link_list li a img {
+    display: block;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.2s all ease;
+}
+
+header .header_inner ul.header_link_list li a img:hover {
+    transform: scale(1.1);
+}
+
 main {
     margin: 10vh auto;
     width: min(1300px, 90%);
@@ -76,7 +133,7 @@ main h1, h2{
 }
 
 #videoInfo ul.status li {
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid black;
 }
 
 #videoInfo ul.status li.title {
@@ -124,9 +181,33 @@ main h1, h2{
 }
 
 footer {
-    padding: 1%;
     width: 100%;
+    height: auto;
+}
+
+footer .footer_inner {
+    padding: 1%;
+    background-color: rgb(20, 20, 20);
     color: white;
-    background-color: rgb(30, 30, 30);
     text-align: center;
+}
+
+footer .footer_inner a {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: auto;
+}
+
+footer .footer_inner a img {
+    width: 100%;
+    transition: 0.2s all ease;
+}
+
+footer .footer_inner a img:hover {
+    transform: scale(1.1);
+}
+
+footer .footer_inner .author {
+    color: gray;
 }
